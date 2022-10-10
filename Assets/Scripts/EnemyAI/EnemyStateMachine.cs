@@ -23,7 +23,7 @@ public class EnemyStateMachine : EnemyBase
     public bool discoveredWhenAttacked;
     private int saveLifeValue;
 
-    [Header("行動がアタッチされたスクリプト\n状態が変更された場合（Now以外）、以降の処理は行うが状態の変化は行わない。\n(優先度は要素０が最も高い)")]
+    [Header("Stateごとに実行するスクリプト。状態変化優先度は要素０が最も高い。")]
     public EnemyStateFunction[] esfVigilance = new EnemyStateFunction[1];
     public EnemyStateFunction[] esfPlayerFind = new EnemyStateFunction[1];
     public EnemyStateFunction[] esfEnemyDie = new EnemyStateFunction[1];
