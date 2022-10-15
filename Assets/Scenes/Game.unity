@@ -342,6 +342,10 @@ PrefabInstance:
       value: PlayerTank
       objectReference: {fileID: 0}
     - target: {fileID: 9174820953558117324, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: lifeMax
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9174820953558117324, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: playGameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 901663035}
@@ -4927,9 +4931,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   createEffect: {fileID: 6534496833897311918, guid: a3c1f8963fe089a4cba42405e10daafb, type: 3}
   player: {fileID: 610097898}
-  createPositionDistance: 15
   RandomMax: 100
   RandomCreate: 20
   cellSize: 10
