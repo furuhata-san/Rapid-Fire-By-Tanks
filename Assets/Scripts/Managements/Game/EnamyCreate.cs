@@ -7,8 +7,7 @@ public class EnamyCreate : MonoBehaviour
     [Header("生産したいエネミーのPrafabをセット")]
     public GameObject[] EnemyPrefab = new GameObject[1];
 
-    const int CreateEnemyMax = 10;
-    public GameObject[] GoEnemy = new GameObject[CreateEnemyMax];//敵を最大数以上生成できなくする
+    public GameObject[] GoEnemy = new GameObject[1];//敵を最大数以上生成できなくする
 
     [Header("敵を生成する際のエフェクト")]
     public GameObject createEffect;
@@ -16,7 +15,6 @@ public class EnamyCreate : MonoBehaviour
 
     [Header("プレイヤーのオブジェクトを挿入（座標位置が知りたいため）")]
     public GameObject player;
-    public float createPositionDistance;
 
     [Header("作成乱数の最大値")]
     public float RandomMax = 100;
@@ -44,15 +42,15 @@ public class EnamyCreate : MonoBehaviour
         float randomNum = Random.Range(0, RandomMax);
         if (randomNum <= RandomCreate)
         {
-            int EnemyNum = Random.Range(0, EnemyPrefab.Length);
-
+            //敵を１体だけ生成する
             bool createFlag = false;
-            for (int i = 0; i < CreateEnemyMax && !createFlag; ++i)
+            int EnemyNum = Random.Range(0, EnemyPrefab.Length);
+            for (int i = 0; i < GoEnemy.Length && !createFlag; ++i)
             {
                 //配列の要素が空いていた場合、敵を生成する。
                 if (!GoEnemy[i])
                 {
-                    GameObject go = Instantiate(EnemyPrefab[EnemyNum], SetPos10x10z(i), transform.rotation);
+                    GameObject go = Instantiate(EnemyPrefab[EnemyNum], SetPosSlicePos(i), transform.rotation);
                     GoEnemy[i] = go;//敵を配列に保存
                     createFlag = true;
                 }
@@ -60,7 +58,7 @@ public class EnamyCreate : MonoBehaviour
         }
     }
 
-    public Vector3 SetPos10x10z(int for_I)
+    public Vector3 SetPosSlicePos(int for_I)
     {
         //敵を生成するための座標をマス目として宣言する
         float[] posX = new float[mapSlice];
@@ -68,6 +66,8 @@ public class EnamyCreate : MonoBehaviour
         //スライスを行い、座標計算
         for (int i = 0; i < mapSlice; ++i)
         {
+            //マップ左端(-4～5) => 0は中心の左上（Z軸が正面方向を向いている場合）
+            //マップ左端から現在の番号(i)分を減算し、マス目中心（１マスの半分）を代入する
             posX[i] = ((-(mapSlice / 2) + i) * cellSize) + (cellSize / 2);
             posZ[i] = ((-(mapSlice / 2) + i) * cellSize) + (cellSize / 2);
         }
@@ -80,52 +80,52 @@ public class EnamyCreate : MonoBehaviour
             //最後にfor文で判定を行うため一度無限ループを無効化
             loopFlag = false;
 
-            //生成するマス目の値をランダムで取得
+            //生成するマス目の要素番号をランダムで取得
             randomX = Random.Range(0, mapSlice);
             randomZ = Random.Range(0, mapSlice);
-            //プレイヤーの現在の座標を取得
-            float pPosMinX = player.transform.position.x - createPositionDistance;
-            float pPosMaxX = player.transform.position.x + createPositionDistance;
-            float pPosMinZ = player.transform.position.z - createPositionDistance;
-            float pPosMaxZ = player.transform.position.z + createPositionDistance;
 
-            //プレイヤーの座標が敵生成予定地の周辺だった場合は再度ループを行う
-            for (int x = -1; x <= 1 && loopFlag == false; ++x) { 
-                for (int z = -1; z <= 1; ++z){//二重ループ
-                    if (randomX + x >= 0 && randomX + x < mapSlice){//オーバーラン防止
-                        if (randomZ + z >= 0 && randomZ + z < mapSlice){//オーバーラン防止
-                            if(pPosMinX <= posX[randomX] && posX[randomX] <= pPosMaxX){//プレイヤー付近の場合
-                                if (pPosMinZ <= posZ[randomZ] && posZ[randomZ] <= pPosMaxZ)//プレイヤー付近の場合
-                                {
-                                    //再度ループ
-                                    loopFlag = true;
-                                }
-                            }
-                        }
-                    }
+            //プレイヤーの現在の座標を取得し、サイズをマス目分拡大
+            //(マス目の中心にいた場合は生成しない、端にいた場合は生成する)
+            float PlayerAreaSize = cellSize * 1.75f;
+            float pPosMinX = player.transform.position.x - PlayerAreaSize;
+            float pPosMaxX = player.transform.position.x + PlayerAreaSize;
+            float pPosMinZ = player.transform.position.z - PlayerAreaSize;
+            float pPosMaxZ = player.transform.position.z + PlayerAreaSize;
+
+            //以下プレイヤー、もしくはすでに存在している敵と重なっていないかの判定を行う。
+            //フラグがtrueになった瞬間判定を終了する
+
+            //プレイヤーの座標が敵生成予定地の周辺だった場合は再度ループを行う（XZ軸を使用した２Ｄの矩形の当たり判定）
+            ///（二重ループ削除）
+            if (pPosMinX <= posX[randomX] && posX[randomX] <= pPosMaxX)
+            {//プレイヤー付近の場合（Ｘ）
+                if (pPosMinZ <= posZ[randomZ] && posZ[randomZ] <= pPosMaxZ)//プレイヤー付近の場合（Ｚ）
+                {
+                    //再度ループ
+                    loopFlag = true;//(for文終了)
                 }
             }
 
+
+
             //他の敵と座標がかぶっている場合、再度ループ
-            for(int i = 0; i < CreateEnemyMax; ++i)
+            for(int i = 0; i < GoEnemy.Length && loopFlag == false; ++i)
             {
                 if(i != for_I)//自身の番号と異なる場合
                 {
-                    if (GoEnemy[i])
+                    if (GoEnemy[i])//敵が生成されている場合
                     {
-                        if (GoEnemy[i].transform.position.x / cellSize ==
-                            randomX)//X座標番号が同じ場合
+                        if ((GoEnemy[i].transform.position.x - posX[0]) / cellSize == randomX)//X座標番号が同じ場合
                         {
-                            if (GoEnemy[i].transform.position.y / cellSize ==
-                                randomZ)//Z座標番号が同じ場合
+                            if ((GoEnemy[i].transform.position.z - posZ[0]) / cellSize == randomZ)//Z座標番号が同じ場合
                             {
-                                loopFlag = true;//再度ループ
+                                //再度ループ
+                                loopFlag = true;//for文終了
                             }
                         }
                     }
                 }
             }
-
         }
 
         //エフェクト生成
