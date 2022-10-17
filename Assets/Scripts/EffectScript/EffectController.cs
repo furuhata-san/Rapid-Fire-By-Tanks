@@ -9,14 +9,17 @@ public class EffectController : MonoBehaviour
     [Header("削除されるまでの時間")]
     [SerializeField]
     private float DeleteTime = 0;
-    [HideInInspector]
+    [Header("サイズ")]
     public Vector3 Scale;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        this.transform.localScale = Scale;
+        if(Scale != Vector3.zero)
+        {
+            this.transform.localScale = Scale;
+        }
     }
 
     // Update is called once per frame
@@ -25,7 +28,7 @@ public class EffectController : MonoBehaviour
         float tdt = Time.deltaTime;
         //カウントを増やす
         timer += tdt;
-        if (timer >= DeleteTime) //3秒後
+        if (timer >= DeleteTime)
         {
             //破棄
             Destroy(gameObject);
