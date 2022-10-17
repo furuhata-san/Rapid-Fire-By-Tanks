@@ -19,14 +19,25 @@ public class ShadowTankSceneChanger : MonoBehaviour
         }
     }
 
+    //トリガーではない当たり判定（床）
     public void OnCollisionEnter2D(Collision2D collision)
     {
         moveFlag = true;
     }
 
+    //戦車の中心にあるトリガー化された判定（スイッチのようなもの）
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneLoading(sceneName);
+        //空だった場合はアプリ終了
+        if (sceneName == "")
+        {
+            Application.Quit();
+        }
+        //シーン名が空ではない場合はシーン変更
+        else
+        {
+            SceneLoading(sceneName);
+        }
     }
 
     public void SceneLoading(string name)

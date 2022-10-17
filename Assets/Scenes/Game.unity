@@ -249,24 +249,12 @@ PrefabInstance:
       propertyPath: lifeAndUI
       value: 
       objectReference: {fileID: 45114630}
-    - target: {fileID: 4125035446370103338, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
-      propertyPath: AssumeSyncedSends
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4125035446370103338, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
-      propertyPath: InterpolateServer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4125035446370103338, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
-      propertyPath: ExtrapolatePosition
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4125035446370103338, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
-      propertyPath: InterpolatePosition
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4288270547673826418, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: acz
+      value: 
+      objectReference: {fileID: 455423707}
+    - target: {fileID: 4288270547673826418, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: aim
       value: 
       objectReference: {fileID: 455423707}
     - target: {fileID: 4288270547673826418, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
@@ -278,12 +266,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 455423707}
     - target: {fileID: 6764427945846602304, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: aim
+      value: 
+      objectReference: {fileID: 455423707}
+    - target: {fileID: 6764427945846602304, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: lifeAndUI
       value: 
       objectReference: {fileID: 45114630}
+    - target: {fileID: 6764427945846602304, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: laserPrefab
+      value: 
+      objectReference: {fileID: 8757789123917646838, guid: f6254ff69a4ca014f8cee01fc63fd6bd, type: 3}
+    - target: {fileID: 6764427945846602304, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: laserSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e25282abd80d66049a873ed7546021d8, type: 3}
     - target: {fileID: 6856138910868237532, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6856138910868237532, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -341,10 +341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTank
       objectReference: {fileID: 0}
-    - target: {fileID: 9174820953558117324, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
-      propertyPath: lifeMax
-      value: 100
-      objectReference: {fileID: 0}
+    - target: {fileID: 9174820953558117322, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: sau
+      value: 
+      objectReference: {fileID: 1786846863}
     - target: {fileID: 9174820953558117324, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: playGameObjects.Array.data[0]
       value: 
@@ -357,9 +357,7 @@ PrefabInstance:
       propertyPath: stopGameObjects.Array.data[0]
       value: 
       objectReference: {fileID: 1786846856}
-    m_RemovedComponents:
-    - {fileID: 4125035446370103338, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
-    - {fileID: 5704653605564270600, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
 --- !u!4 &107036908 stripped
 Transform:
@@ -3067,7 +3065,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &994083309 stripped
 GameObject:
@@ -3392,6 +3390,10 @@ PrefabInstance:
     - target: {fileID: 8655377836311072674, guid: 77a14637b2d2d5f4694b31890e127f61, type: 3}
       propertyPath: m_Name
       value: FadeOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655377836311072674, guid: 77a14637b2d2d5f4694b31890e127f61, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8655377836311072685, guid: 77a14637b2d2d5f4694b31890e127f61, type: 3}
       propertyPath: m_Pivot.x
@@ -4424,7 +4426,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1596967329
 MonoBehaviour:
@@ -4804,7 +4806,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1786846858
 AudioSource:
