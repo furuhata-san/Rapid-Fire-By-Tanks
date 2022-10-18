@@ -172,7 +172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885846817173977510}
   m_Layer: 6
-  m_Name: MiniMapBoss
+  m_Name: MiniMap_Cross
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

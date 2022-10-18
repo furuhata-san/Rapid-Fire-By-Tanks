@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: -8575617752156039146}
   - component: {fileID: 2249911082910159960}
   - component: {fileID: 101541171898822181}
-  - component: {fileID: 2888555806243579865}
   - component: {fileID: 2630448785300006508}
   m_Layer: 0
   m_Name: TurretEnemyPrefab
@@ -91,7 +90,6 @@ MonoBehaviour:
   firstState: 0
   discoveredWhenAttacked: 1
   esfVigilance:
-  - {fileID: 2888555806243579865}
   - {fileID: 4785035326744905487}
   esfPlayerFind:
   - {fileID: 1630122884233217525}
@@ -112,21 +110,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyEffect: {fileID: 3067993115432323964, guid: 5af075a51bd9caa4aac437a209140f46, type: 3}
   DieEffectScale: {x: 1, y: 1, z: 1}
---- !u!114 &2888555806243579865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8533006877294742507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbd54be6bc5027418aece7d3d153d01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerStandTime: 5
-  targetName: PlayerTank
-  nextState: 1
 --- !u!114 &2630448785300006508
 MonoBehaviour:
   m_ObjectHideFlags: 0

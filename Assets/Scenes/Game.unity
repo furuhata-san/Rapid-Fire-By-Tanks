@@ -283,7 +283,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: e25282abd80d66049a873ed7546021d8, type: 3}
     - target: {fileID: 6856138910868237532, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6856138910868237532, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -345,6 +345,10 @@ PrefabInstance:
       propertyPath: sau
       value: 
       objectReference: {fileID: 1786846863}
+    - target: {fileID: 9174820953558117324, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: lifeMax
+      value: 20000
+      objectReference: {fileID: 0}
     - target: {fileID: 9174820953558117324, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: playGameObjects.Array.data[0]
       value: 
@@ -3052,6 +3056,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeOut: {fileID: 1580423527}
+  source: {fileID: 0}
+  titleTank: {fileID: 0}
 --- !u!4 &983955273
 Transform:
   m_ObjectHideFlags: 0
@@ -5520,7 +5526,7 @@ Transform:
   - {fileID: 362317935}
   - {fileID: 560947994}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1986471767
 GameObject:

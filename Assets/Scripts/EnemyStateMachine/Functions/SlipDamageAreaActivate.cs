@@ -5,7 +5,7 @@ using UnityEngine;
 public class SlipDamageAreaActivate : EnemyStateFunction
 {
     [Header("疑似的にスリップダメージにしたい場合、コライダー（当たり判定）を参照する")]
-    public GameObject hitArea;
+    public Collider hitArea;
     [SerializeField]
     private bool startSetActive = true;
 
@@ -17,7 +17,7 @@ public class SlipDamageAreaActivate : EnemyStateFunction
     // Start is called before the first frame update
     void Start()
     {
-        hitArea.SetActive(startSetActive);
+        hitArea.enabled = startSetActive;
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class SlipDamageAreaActivate : EnemyStateFunction
         nowCount += Time.deltaTime;
 
         float intervalCopy = 0;
-        if (hitArea.activeInHierarchy)//コライダー有効時
+        if (hitArea.enabled)//コライダー有効時
         {
             intervalCopy = intervalGoToFalse;
         }
@@ -38,7 +38,7 @@ public class SlipDamageAreaActivate : EnemyStateFunction
         if (nowCount >= intervalCopy)
         {
             //フラグ反転
-            hitArea.SetActive(!hitArea.activeInHierarchy);
+            hitArea.enabled = !hitArea.enabled;
             nowCount = 0;
         }
 

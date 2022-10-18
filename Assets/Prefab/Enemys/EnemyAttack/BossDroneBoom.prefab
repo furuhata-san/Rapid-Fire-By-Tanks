@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6185314276153352526
+--- !u!1 &7976244648731166522
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,13 +8,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6179541485940012372}
-  - component: {fileID: 6173073415082537796}
-  - component: {fileID: 6161476709298537348}
-  - component: {fileID: 6184313116290958802}
-  - component: {fileID: 6184313116290958803}
-  - component: {fileID: 6184313116290958815}
-  - component: {fileID: 6184313116290958808}
+  - component: {fileID: 4613876941412181518}
+  - component: {fileID: 7415668125316691886}
+  - component: {fileID: 4867470228028324171}
+  - component: {fileID: 278851364798330692}
+  - component: {fileID: 1807655877235775417}
+  - component: {fileID: 1157344478312937017}
+  - component: {fileID: 8758952371298805905}
   m_Layer: 0
   m_Name: BossDroneBoom
   m_TagString: Untagged
@@ -22,39 +22,41 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6179541485940012372
+--- !u!4 &4613876941412181518
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185314276153352526}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 50, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.3, z: 0.25}
+  m_GameObject: {fileID: 7976244648731166522}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: 9.858452, y: 14.21, z: 20.968517}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
---- !u!33 &6173073415082537796
+--- !u!33 &7415668125316691886
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185314276153352526}
+  m_GameObject: {fileID: 7976244648731166522}
   m_Mesh: {fileID: 4300000, guid: 5bb10a455c42fbd4db3364f122c26a79, type: 3}
---- !u!23 &6161476709298537348
+--- !u!23 &4867470228028324171
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185314276153352526}
+  m_GameObject: {fileID: 7976244648731166522}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -85,13 +87,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &6184313116290958802
+--- !u!54 &278851364798330692
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185314276153352526}
+  m_GameObject: {fileID: 7976244648731166522}
   serializedVersion: 2
   m_Mass: 100
   m_Drag: 0
@@ -101,13 +103,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &6184313116290958803
+--- !u!136 &1807655877235775417
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185314276153352526}
+  m_GameObject: {fileID: 7976244648731166522}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -115,13 +117,13 @@ CapsuleCollider:
   m_Height: 11.9181595
   m_Direction: 1
   m_Center: {x: -0.00000023841858, y: 0.70814633, z: -0.00000059604645}
---- !u!82 &6184313116290958815
+--- !u!82 &1157344478312937017
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185314276153352526}
+  m_GameObject: {fileID: 7976244648731166522}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -229,13 +231,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6184313116290958808
+--- !u!114 &8758952371298805905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185314276153352526}
+  m_GameObject: {fileID: 7976244648731166522}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3171e005063360488e62002b88c4627, type: 3}
@@ -244,3 +246,4 @@ MonoBehaviour:
   DestroyEffect: {fileID: 8575296595726668847, guid: 8ecce43dc2a67af4bb474d25b720e2e6, type: 3}
   DieEffectScale: {x: 5, y: 5, z: 5}
   damage: 30
+  createPosYPlas: {x: 0, y: 0}

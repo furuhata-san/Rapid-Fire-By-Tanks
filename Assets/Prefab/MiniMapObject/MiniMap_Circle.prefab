@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3531285417665369296}
   - component: {fileID: 9217467835893367107}
   m_Layer: 6
-  m_Name: MiniMapObject
+  m_Name: MiniMap_Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -6.5, z: 0}
   m_LocalScale: {x: 5, y: 3, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8794229456094248496}
   m_RootOrder: 0
@@ -86,6 +87,7 @@ Transform:
   m_LocalRotation: {x: 0.000000021349521, y: 0.000000008664828, z: 0.37606356, w: 0.9265939}
   m_LocalPosition: {x: -0, y: 16.917332, z: 0.000030517578}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5765544458875882174}
   m_RootOrder: 0
@@ -109,6 +111,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -169,6 +172,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5765544458875882174}
   - {fileID: 2963675794649505624}
@@ -202,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a547c411cf447a04f9e3f900157c55c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitArea: {fileID: 5765544457446146168}
+  hitArea: {fileID: 5765544457446146167}
   startSetActive: 1
   intervalGoToFalse: 0.1
   intervalGoToTrue: 0.1
@@ -240,10 +244,11 @@ MonoBehaviour:
   firstDied: 1
   nowState: 0
   firstState: 0
+  discoveredWhenAttacked: 0
   esfVigilance:
   - {fileID: 5765544457945131515}
   esfPlayerFind:
-  - {fileID: 0}
+  - {fileID: 5765544457945131515}
   esfEnemyDie:
   - {fileID: 5765544457945131514}
 --- !u!1 &5765544458875809686
@@ -274,6 +279,7 @@ Transform:
   m_LocalRotation: {x: 0.00000008146034, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5765544458875870270}
   m_Father: {fileID: 5765544458875880578}
@@ -298,6 +304,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

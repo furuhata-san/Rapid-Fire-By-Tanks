@@ -14705,7 +14705,6 @@ Transform:
   - {fileID: 8476935962767569584}
   - {fileID: 3589578745154819499}
   - {fileID: 1575067980261959092}
-  - {fileID: 787794799915903995}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19672,6 +19671,10 @@ PrefabInstance:
       propertyPath: scalingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2240393875710726124, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3074264411751843610, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
       propertyPath: m_Name
       value: ParticleSystem_Fire_Ring
@@ -19762,6 +19765,14 @@ PrefabInstance:
       propertyPath: scalingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2240393875710726124, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2240393875710726124, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3074264411751843610, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
       propertyPath: m_Name
       value: ParticleSystem_Fire_Ring (2)
@@ -19776,7 +19787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.85
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
       propertyPath: m_LocalScale.y
@@ -19784,7 +19795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.85
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19833,96 +19844,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
   m_PrefabInstance: {fileID: 4745492184364719007}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6840496376708306384
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8575296595726174223}
-    m_Modifications:
-    - target: {fileID: 2240393875710726124, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2240393875710726124, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: lengthInSec
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2240393875710726124, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: scalingMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3074264411751843610, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_Name
-      value: ParticleSystem_Fire_Ring (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3074264411751843610, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
---- !u!4 &787794799915903995 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
-  m_PrefabInstance: {fileID: 6840496376708306384}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7336402128653937536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19942,6 +19863,14 @@ PrefabInstance:
       propertyPath: scalingMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2240393875710726124, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2240393875710726124, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3074264411751843610, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
       propertyPath: m_Name
       value: ParticleSystem_Fire_Ring (1)
@@ -19956,7 +19885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
       propertyPath: m_LocalScale.y
@@ -19964,7 +19893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6053009440614432299, guid: 48b3214a75aed41f7abb23152aee6999, type: 3}
       propertyPath: m_LocalPosition.x
