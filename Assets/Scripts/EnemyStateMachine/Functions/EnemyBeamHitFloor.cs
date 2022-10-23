@@ -35,14 +35,15 @@ public class EnemyBeamHitFloor : EnemyStateFunction
             RaycastHit beamHit;
             if(Physics.Raycast(machineBeam, out beamHit))
             {
-                if (beamHit.transform.name == "Plane")
+                if (beamHit.transform.tag == "Wall")
                 {
                     // RayがColliderと衝突した地点の座標を取得
                     Vector3 targetPos = beamHit.point;
+                    targetPos = new Vector3(targetPos.x, 0, targetPos.z);
 
                     //エフェクト生成
                     GameObject go = Instantiate(effect);
-                    effect.transform.position = targetPos;
+                    go.transform.position = targetPos;
                 }
             }
 
