@@ -249,6 +249,30 @@ PrefabInstance:
       propertyPath: lifeAndUI
       value: 
       objectReference: {fileID: 45114630}
+    - target: {fileID: 1920325295309044769, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: simulationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920325295599465117, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: simulationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920325295669746585, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: simulationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920325296008340043, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: simulationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920325296314883185, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: simulationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920325296619783155, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: simulationSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4288270547673826418, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: acz
       value: 
