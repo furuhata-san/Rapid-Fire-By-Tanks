@@ -7,6 +7,11 @@ public class BossCreate : MonoBehaviour
     [Header("ボス生成時テキスト")]
     public GameObject createText;
 
+    [Header("ボスが死亡してから再度生成するまでの時間")]
+    [SerializeField]
+    private float recreateTime = 0;
+    private float recreateNowCount = 0;
+
     private ScoreAndUIMgr sau;
 
     [System.Serializable]
@@ -45,28 +50,35 @@ public class BossCreate : MonoBehaviour
                     //ボスが存在しない場合
                     if (!bossLive)
                     {
+                        //敵ボスが死亡してから一定時間経過後
+                        recreateNowCount -= Time.deltaTime;
+                        if (recreateNowCount <= 0)
+                        {
+                            //カウント初期設定
+                            recreateNowCount = recreateTime;
 
-                        //ボス生成
-                        GameObject go = Instantiate(boss[createdNum].Prefab,
-                                                    boss[createdNum].pos,
-                                                    boss[createdNum].ang);
-                        //ボス保存
-                        bossLive = go;
-                        
-                        //壊すべきビルがある場合
-                        if (boss[createdNum].bdc)
-                            boss[createdNum].bdc.enabled = true;
+                            //ボス生成
+                            GameObject go = Instantiate(boss[createdNum].Prefab,
+                                                        boss[createdNum].pos,
+                                                        boss[createdNum].ang);
+                            //ボス保存
+                            bossLive = go;
 
-                        //テキスト生成
-                        createText.SetActive(true);
+                            //壊すべきビルがある場合
+                            if (boss[createdNum].bdc)
+                                boss[createdNum].bdc.enabled = true;
 
-                        //生成できないようにフラグをオフに(一応)
-                        boss[createdNum].createFlag = false;
-                        //ナンバーを変更
-                        ++createdNum;
-                    }                }
+                            //テキスト生成
+                            createText.SetActive(true);
+
+                            //生成できないようにフラグをオフに(一応)
+                            boss[createdNum].createFlag = false;
+                            //ナンバーを変更
+                            ++createdNum;
+                        }
+                    }                
+                }
             }
-
         }
     }
 }

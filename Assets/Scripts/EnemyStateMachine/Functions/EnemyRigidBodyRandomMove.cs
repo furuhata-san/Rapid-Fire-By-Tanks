@@ -38,6 +38,12 @@ public class EnemyRigidBodyRandomMove : EnemyStateFunction
             //‰ñ“]—Ê‚ğƒ‰ƒ“ƒ_ƒ€‚É
             RotateY = Random.Range(-RotateSpeed, RotateSpeed);
             RotateYCnt = 0;
+            //RigidBody‚ğ‰Šú‰»
+            Rigidbody rigidbody;
+            if(rigidbody = this.GetComponent<Rigidbody>())
+            {
+                rigidbody.velocity = Vector3.zero;
+            }
         }
 
         transform.Translate(0, 0, MoveSpeed * tdt);

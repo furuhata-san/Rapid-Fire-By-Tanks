@@ -200,6 +200,30 @@ PrefabInstance:
       propertyPath: lifeAndUI
       value: 
       objectReference: {fileID: 1423362161}
+    - target: {fileID: 1920325295309044769, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: lengthInSec
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920325295599465117, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: lengthInSec
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920325295669746585, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: lengthInSec
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920325296008340043, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: lengthInSec
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920325296314883185, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: lengthInSec
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920325296619783155, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: lengthInSec
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 4288270547673826418, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: aim
       value: 
@@ -3071,6 +3095,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeOut: {fileID: 1477167739}
+  source: {fileID: 0}
+  titleTank: {fileID: 0}
 --- !u!4 &964103023
 Transform:
   m_ObjectHideFlags: 0
