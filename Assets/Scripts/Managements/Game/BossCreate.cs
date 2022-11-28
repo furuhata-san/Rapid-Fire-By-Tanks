@@ -44,14 +44,17 @@ public class BossCreate : MonoBehaviour
         {
             if (boss[createdNum].createFlag)
             {
-                //スコアが生成条件を満たしていたら
-                if (sau.GetNowScore() >= boss[createdNum].createScore)
+
+                //ボスが存在しない場合
+                if (!bossLive)
                 {
-                    //ボスが存在しない場合
-                    if (!bossLive)
+                    //再生成するまでののカウントを減少
+                    recreateNowCount -= Time.deltaTime;
+
+                    //スコアが生成条件を満たしていたら
+                    if (sau.GetNowScore() >= boss[createdNum].createScore)
                     {
                         //敵ボスが死亡してから一定時間経過後
-                        recreateNowCount -= Time.deltaTime;
                         if (recreateNowCount <= 0)
                         {
                             //カウント初期設定
@@ -76,7 +79,7 @@ public class BossCreate : MonoBehaviour
                             //ナンバーを変更
                             ++createdNum;
                         }
-                    }                
+                    }
                 }
             }
         }
