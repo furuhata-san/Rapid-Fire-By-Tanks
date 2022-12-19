@@ -414,7 +414,7 @@ MonoBehaviour:
   DestroyEffect: {fileID: 8575296595726668847, guid: 8ecce43dc2a67af4bb474d25b720e2e6, type: 3}
   DieEffectScale: {x: 3.5, y: 3.5, z: 3.5}
   damage: 40
-  createPosYPlas: {x: -25, y: 25}
+  createPosYPlas: {x: 0, y: 150}
 --- !u!1001 &8231214344886943089
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,29 +5,29 @@ using UnityEngine.UI;
 
 public class TutorialSchedule : MonoBehaviour
 {
-    public GameObject textGameObject;
-    public TextboxControl textboxControl;
-    private Text textData;
+    [Header("テキスト参照"), SerializeField]
+    private Text textObject;
+    [Header("ボックスのコントローラー"), SerializeField]
+    private TextboxControl textboxControl;
+    [Header("右クリックマウス画像"), SerializeField]
+    private GameObject mouseRight;
 
     [System.Serializable]
     public struct Schedule
     {
         public string writeText;
-        public float writeTime;
         public TutorialChecker checker;
+        public bool msRightClick;
     }
     [Header("表示したいテキストと表示時間(毎回０秒から計測)(条件を付ける場合は条件を書いたスクリプトを挿入)")]
     public Schedule[] schedules = new Schedule[1];
     [SerializeField]
     public int scheduleNum;
-    public float textTimer;
 
     // Start is called before the first frame update
     void Start()
     {
         scheduleNum = 0;
-        textTimer = 0;
-        textData = textGameObject.GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -35,46 +35,46 @@ public class TutorialSchedule : MonoBehaviour
     {
         if (scheduleNum < schedules.Length)
         {
-            textData.text = schedules[scheduleNum].writeText;
+            textObject.text = schedules[scheduleNum].writeText;
 
+            mouseRight.SetActive(schedules[scheduleNum].msRightClick);
+
+            //処理有効化
             if (schedules[scheduleNum].checker)
             {
                 schedules[scheduleNum].checker.enabled = true;
-                //判定がtrueになったら時間を加算
-                if (schedules[scheduleNum].checker.GetFlag())
-                {
-                    timerUpdate();
-                }
-            }
-            else
-            {
-                //時間を加算
-                timerUpdate();
             }
 
-            //早送り
-            if (Input.GetMouseButtonDown(1))
-            {
-                if (schedules[scheduleNum].checker)
-                    schedules[scheduleNum].checker.flag = true;
-                textTimer = 999.0f;
-            }
+            //テキストページ送り
+            TextPage();
+
         }
     }
 
-    public void timerUpdate()
+    public void TextPage()
     {
-        textTimer += Time.deltaTime;
+        //右クリックでページ
+        bool pageNextFlag = Input.GetMouseButtonDown(1);
+        
+        //処理が参照されている場合
+        if (schedules[scheduleNum].checker)
+        {
+            //クリックフラグが無効化されている場合
+            if (!schedules[scheduleNum].msRightClick)
+            {
+                //処理のflagでページ送りを判定
+                pageNextFlag = schedules[scheduleNum].checker.flag;
+            }
+        }
 
-        //表示時間を超えていたら
-        if (schedules[scheduleNum].writeTime <= textTimer)
+        //右クリック　＆　条件を満たしている場合
+        if (pageNextFlag)
         {
             //テキストボックスを駆動
             textboxControl.SetFlag(true);
             //テキストを消す
-            textData.text = "";
-            //時間を初期化
-            textTimer = 0;
+            textObject.text = "";
+
             //判定スクリプトがある場合、軽くする＆バグ防止のため無効化
             if (schedules[scheduleNum].checker)
             {

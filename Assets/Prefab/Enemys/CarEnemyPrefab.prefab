@@ -995,6 +995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniMapObject
       objectReference: {fileID: 0}
+    - target: {fileID: 1928354007532361598, guid: 2a77be95a4abdd448823f53b0b3d5973, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7193657520359499512, guid: 2a77be95a4abdd448823f53b0b3d5973, type: 3}
       propertyPath: m_RootOrder
       value: 1

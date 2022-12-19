@@ -1,22 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TextboxControl : MonoBehaviour
 {
     private bool flag = true;
     private bool moveState = false;
 
-    private float ScaleX = 0.0f;
+    
 
-    public float Speedx;
+    [Header("テキスト本体とボックスのRectTranceform"), SerializeField]
+    private RectTransform boxRect;
+    private Vector2 boxFirstSize;
+    [SerializeField]
+    private RectTransform textRect;
+    private Vector2 textFirstSize;
+
+    [Header("テキストボックスのサイズ変更速度と効果音")]
+    public float ScalerSpeed;
+    private float Scaler = 0.0f;
+
     public AudioClip clip;
 
     private void Start()
     {
         flag = true;
         moveState = false;
-        ScaleX = 0.0f;
+        boxFirstSize = boxRect.localScale;
+        textFirstSize = textRect.localScale;
+        Scaler = 1.0f;
     }
 
     private void Update()
@@ -26,18 +39,19 @@ public class TextboxControl : MonoBehaviour
             //trueなら縮める、falseなら広げる
             if (moveState)
             {
-                ScaleX -= Time.deltaTime * Speedx;
-                if (ScaleX <= 0.0f) { ScaleX = 0.0f; moveState = false; }
+                Scaler -= Time.deltaTime * ScalerSpeed;
+                if (Scaler <= 0.0f) { Scaler = 0.0f; moveState = false; }
             }
             else
             {
-                ScaleX += Time.deltaTime * Speedx;
-                if (ScaleX >= 1.0f) { ScaleX = 1.0f; flag = false; }
+                Scaler += Time.deltaTime * ScalerSpeed;
+                if (Scaler >= 1.0f) { Scaler = 1.0f; flag = false; }
             }
         }
 
         //大きさを適用
-        transform.localScale = new Vector3(ScaleX, 1.0f, 1.0f);
+        boxRect.localScale = boxFirstSize * Scaler;
+        textRect.localScale = textFirstSize * Scaler;
     }
 
     public void SetFlag(bool flag_)

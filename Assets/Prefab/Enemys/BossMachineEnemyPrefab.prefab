@@ -570,7 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637f73927b697354da38f4c5b60a5e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeMax: 200
+  lifeMax: 120
   randomRotateRespawn: 0
   dieAudioSource: {fileID: -5862579904252249911}
   score: 5000

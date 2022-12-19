@@ -16,7 +16,7 @@ public class PlayerLifeMgr : MonoBehaviour
     public float GetLifeNow() { return lifeNow; }
     public int GetLifeMax() { return lifeMax; }
 
-    private void HealLife(float value) { 
+    public void HealLife(float value) { 
         if (!dieStartFlag) return;
         lifeNow += value;
         if (lifeNow > lifeMax) lifeNow = lifeMax;

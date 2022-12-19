@@ -19,6 +19,12 @@ public class PlayerCanonChanger : MonoBehaviour
     [SerializeField]
     private ParticleSystem effect;
 
+    [Header("戦車の体力と回復量")]
+    [SerializeField]
+    private PlayerLifeMgr lifeMgr;
+    [SerializeField]
+    private float healValue;
+
     [Header("スコアマネージャーを参照")]
     [SerializeField]
     private ScoreAndUIMgr sau;
@@ -69,7 +75,10 @@ public class PlayerCanonChanger : MonoBehaviour
             //同じ武器だった場合
             else
             {
-                //効果音のみ
+                //体力回復
+                lifeMgr.HealLife(healValue);
+
+                //効果音
                 this.GetComponent<AudioSource>().PlayOneShot(equal);
             }
         }
