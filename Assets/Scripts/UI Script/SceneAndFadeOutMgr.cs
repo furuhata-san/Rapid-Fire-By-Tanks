@@ -12,7 +12,7 @@ public class SceneAndFadeOutMgr : MonoBehaviour
     [SerializeField]
     private AudioSource source;
 
-    [Header("タイトルの戦車を挿入")]
+    [Header("タイトルの戦車を挿入（タイトルのみ）")]
     [SerializeField]
     private ExitTank titleTank;
 

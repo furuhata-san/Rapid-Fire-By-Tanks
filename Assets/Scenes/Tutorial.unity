@@ -318,6 +318,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+--- !u!114 &43622370 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9174820953558117324, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+  m_PrefabInstance: {fileID: 43622369}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aaa37cade5a0264793590780eefa877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &55931324 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2300455456620928004, guid: 1bb4e726ed12eff43b689c08f1912884, type: 3}
@@ -1230,7 +1241,7 @@ MonoBehaviour:
   LifeRed: {fileID: 164076750}
   LifeGreen: {fileID: 205352437}
   redGaugeMoveSpeed: 1
-  playerLifeMgr: {fileID: 0}
+  playerLifeMgr: {fileID: 43622370}
   ebase: {fileID: 0}
   saveEBase: {fileID: 0}
 --- !u!114 &335295737
@@ -5523,7 +5534,7 @@ MonoBehaviour:
     checker: {fileID: 1830504110}
     msRightClick: 1
   - writeText: "\u4E2D\u5FC3\u90E8\u306B\u6575\u304C\u51FA\u73FE\u3057\u307E\u3057\u305F\u3002 
-      \u5C04\u6483\u3057\u3066\u6483\u7834\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+      \u653B\u6483\u3057\u3066\u7834\u58CA\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
     checker: {fileID: 1830504109}
     msRightClick: 0
   - writeText: "\u6575\u304C\u30A2\u30A4\u30C6\u30E0\u3092\u843D\u3068\u3057\u307E\u3057\u305F\u3002 
@@ -5539,7 +5550,7 @@ MonoBehaviour:
     checker: {fileID: 0}
     msRightClick: 1
   - writeText: "\u6B66\u5668\u306E\u5F37\u3055\u3092\u8A66\u3057\u3066\u307F\u307E\u3057\u3087\u3046\uFF01
-      \u51FA\u73FE\u3057\u305F\u6575\uFF14\u4F53\u3092\u6483\u7834\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+      \u51FA\u73FE\u3057\u305F\u6575\uFF14\u4F53\u3092\u7834\u58CA\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
     checker: {fileID: 1830504111}
     msRightClick: 0
   - writeText: "\u6B66\u5668\u306F\u4ED6\u306B\u3082\u30ED\u30B1\u30C3\u30C8\u7832\u3084

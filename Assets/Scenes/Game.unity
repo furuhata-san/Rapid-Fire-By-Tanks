@@ -297,6 +297,14 @@ PrefabInstance:
       propertyPath: simulationSpeed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2397436031699377339, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: far clip plane
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397436031699377339, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4288270547673826418, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: acz
       value: 
@@ -373,6 +381,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6968974034418151695, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
+      propertyPath: far clip plane
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 9091595919140184738, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: acz
       value: 
@@ -416,7 +428,7 @@ PrefabInstance:
     - target: {fileID: 9174820953558117324, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: playGameObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1213871843}
     - target: {fileID: 9174820953558117324, guid: 71954023fcbc25a4faaf8b6d7dcc4e02, type: 3}
       propertyPath: stopGameObjects.Array.data[0]
       value: 
@@ -3262,8 +3274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec847ec12bc3fb40bf24c1fe58af12b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeOut: {fileID: 0}
-  source: {fileID: 0}
+  FadeOut: {fileID: 1213871843}
+  source: {fileID: 1786846865}
   titleTank: {fileID: 0}
 --- !u!4 &983955273
 Transform:
@@ -3523,6 +3535,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3114102956902593480, guid: 312db8f0f3f63a4419bd0d390f83d056, type: 3}
   m_PrefabInstance: {fileID: 579043449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1213871843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8655377836311072674, guid: 77a14637b2d2d5f4694b31890e127f61, type: 3}
+  m_PrefabInstance: {fileID: 539709496}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1246770702
 PrefabInstance:
@@ -5125,13 +5142,13 @@ MonoBehaviour:
   - Prefab: {fileID: 421852915028397742, guid: c4e8754bd53b48d47bd3105f008fd1c6, type: 3}
     pos: {x: 0, y: 20, z: -115}
     ang: {x: 0, y: 0, z: 0, w: 0}
-    createScore: 20000
+    createScore: 18000
     createFlag: 1
     bdc: {fileID: 1786846866}
   - Prefab: {fileID: 9100822301304819963, guid: d370bc15611e74a459cd5e5376e5713d, type: 3}
     pos: {x: 0, y: -25, z: 115}
     ang: {x: 0, y: 1, z: 0, w: -0.00000004371139}
-    createScore: 45000
+    createScore: 37500
     createFlag: 1
     bdc: {fileID: 1786846861}
 --- !u!82 &1786846865
