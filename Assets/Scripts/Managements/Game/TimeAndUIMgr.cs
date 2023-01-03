@@ -49,11 +49,15 @@ public class TimeAndUIMgr : MonoBehaviour
             {
                 //キャノン無効化
                 TankCanon.SetActive(false);
+                
                 //フィニッシュテキスト有効化
                 finishText.SetActive(true);
                 gameBGM.Stop();
-                this.GetComponent<AudioSource>().PlayOneShot(gong);
+
+                //リザルトへ
                 sceneMgr.Go_Result();
+
+                this.GetComponent<AudioSource>().PlayOneShot(gong);
                 gongFlag = false;
             }
         }
